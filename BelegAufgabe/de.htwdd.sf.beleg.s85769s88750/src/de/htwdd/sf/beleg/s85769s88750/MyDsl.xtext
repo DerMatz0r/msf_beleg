@@ -1,0 +1,38 @@
+grammar de.htwdd.sf.beleg.s85769s88750.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.htwdd.de/sf/beleg/s85769s88750/MyDsl"
+
+User_Stories:
+	user_story+=User_Story+;
+
+User_Story:
+	title=Title ":" 'Um' nutzen=Nutzen ', möchte ich als' rolle=Rolle ziel_wunsch=Ziel_Wunsch '.';
+
+Title:
+	substantiv=UPPERCASE_WORD infinitiv=Infinitiv;
+
+Nutzen:
+	subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
+
+Rolle:
+	substantiv=UPPERCASE_WORD;
+
+Ziel_Wunsch:
+	goal=UPPERCASE_WORD infinitiv=Infinitiv;
+
+Infinitiv:
+	word=LOWERCASE_WORD;
+	
+terminal zu: 'zu';
+
+terminal UPPERCASE_WORD:
+	UPERCASE_LETTER LOWERCASE_LETTER+;
+
+terminal LOWERCASE_WORD:
+	LOWERCASE_LETTER+;
+
+terminal fragment UPERCASE_LETTER:
+	('A'..'Z') | 'Ä' | 'Ü' | 'Ö';
+
+terminal fragment LOWERCASE_LETTER:
+	('a'..'z') | 'ä' | 'ü' | 'ö' | 'ß';
