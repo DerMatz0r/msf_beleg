@@ -34,7 +34,7 @@ public class MyDslLabelProvider extends DefaultEObjectLabelProvider {
 		return "Title : " + ele.getSubstantiv() + " " + ele.getInfinitiv().getWord();
 	}
 	String text(Rolle ele) {
-		return "Rolle : " + ele.getSubstantiv();
+		return "Rolle : " + ele.getRole();
 	}
 	String text(Nutzen ele) {
 		return "Nutzen : " + ele.getSubject() + " "+ ele.getVerb();

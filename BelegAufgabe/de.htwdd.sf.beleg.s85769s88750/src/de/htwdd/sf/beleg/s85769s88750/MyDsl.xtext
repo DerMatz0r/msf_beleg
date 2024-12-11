@@ -15,7 +15,7 @@ Nutzen:
 	subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
 
 Rolle:
-	substantiv=UPPERCASE_WORD;
+	role=UPPERCASE_WORD;
 
 Ziel_Wunsch:
 	goal=UPPERCASE_WORD infinitiv=Infinitiv;

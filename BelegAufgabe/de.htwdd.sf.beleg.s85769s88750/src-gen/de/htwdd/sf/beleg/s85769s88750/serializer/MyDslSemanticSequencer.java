@@ -113,16 +113,16 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Rolle returns Rolle
 	 *
 	 * Constraint:
-	 *     substantiv=UPPERCASE_WORD
+	 *     role=UPPERCASE_WORD
 	 * </pre>
 	 */
 	protected void sequence_Rolle(ISerializationContext context, Rolle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ROLLE__SUBSTANTIV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ROLLE__SUBSTANTIV));
+			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ROLLE__ROLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ROLLE__ROLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0(), semanticObject.getSubstantiv());
+		feeder.accept(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0(), semanticObject.getRole());
 		feeder.finish();
 	}
 	

@@ -299,7 +299,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   @Override
-  public EAttribute getRolle_Substantiv()
+  public EAttribute getRolle_Role()
   {
     return (EAttribute)rolleEClass.getEStructuralFeatures().get(0);
   }
@@ -408,7 +408,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     createEAttribute(nutzenEClass, NUTZEN__VERB);
 
     rolleEClass = createEClass(ROLLE);
-    createEAttribute(rolleEClass, ROLLE__SUBSTANTIV);
+    createEAttribute(rolleEClass, ROLLE__ROLE);
 
     ziel_WunschEClass = createEClass(ZIEL_WUNSCH);
     createEAttribute(ziel_WunschEClass, ZIEL_WUNSCH__GOAL);
@@ -467,7 +467,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     initEAttribute(getNutzen_Verb(), ecorePackage.getEString(), "verb", null, 0, 1, Nutzen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rolleEClass, Rolle.class, "Rolle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRolle_Substantiv(), ecorePackage.getEString(), "substantiv", null, 0, 1, Rolle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRolle_Role(), ecorePackage.getEString(), "role", null, 0, 1, Rolle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ziel_WunschEClass, Ziel_Wunsch.class, "Ziel_Wunsch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getZiel_Wunsch_Goal(), ecorePackage.getEString(), "goal", null, 0, 1, Ziel_Wunsch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

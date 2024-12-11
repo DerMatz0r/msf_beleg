@@ -335,9 +335,9 @@ ruleRolle returns [EObject current=null]
 }:
 	(
 		(
-			lv_substantiv_0_0=RULE_UPPERCASE_WORD
+			lv_role_0_0=RULE_UPPERCASE_WORD
 			{
-				newLeafNode(lv_substantiv_0_0, grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0());
+				newLeafNode(lv_role_0_0, grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0());
 			}
 			{
 				if ($current==null) {
@@ -345,8 +345,8 @@ ruleRolle returns [EObject current=null]
 				}
 				setWithLastConsumed(
 					$current,
-					"substantiv",
-					lv_substantiv_0_0,
+					"role",
+					lv_role_0_0,
 					"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
 			}
 		)
@@ -443,6 +443,8 @@ ruleInfinitiv returns [EObject current=null]
 		)
 	)
 ;
+
+RULE_ZU : 'zu';
 
 RULE_UPPERCASE_WORD : RULE_UPERCASE_LETTER RULE_LOWERCASE_LETTER+;
 

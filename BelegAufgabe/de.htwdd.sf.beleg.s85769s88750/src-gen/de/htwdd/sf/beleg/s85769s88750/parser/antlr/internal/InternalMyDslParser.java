@@ -21,24 +21,25 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UPPERCASE_WORD", "RULE_LOWERCASE_WORD", "RULE_UPERCASE_LETTER", "RULE_LOWERCASE_LETTER", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "':'", "'Um'", "', m\\u00F6chte ich als'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UPPERCASE_WORD", "RULE_LOWERCASE_WORD", "RULE_ZU", "RULE_UPERCASE_LETTER", "RULE_LOWERCASE_LETTER", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "':'", "'Um'", "', m\\u00F6chte ich als'", "'.'"
     };
     public static final int RULE_LOWERCASE_WORD=5;
-    public static final int RULE_ID=8;
-    public static final int RULE_WS=13;
-    public static final int RULE_STRING=10;
-    public static final int RULE_ANY_OTHER=14;
-    public static final int RULE_LOWERCASE_LETTER=7;
-    public static final int RULE_SL_COMMENT=12;
-    public static final int RULE_UPERCASE_LETTER=6;
-    public static final int T__15=15;
+    public static final int RULE_ZU=6;
+    public static final int RULE_STRING=11;
+    public static final int RULE_LOWERCASE_LETTER=8;
+    public static final int RULE_SL_COMMENT=13;
+    public static final int T__19=19;
     public static final int T__16=16;
     public static final int RULE_UPPERCASE_WORD=4;
     public static final int T__17=17;
-    public static final int RULE_INT=9;
     public static final int T__18=18;
-    public static final int RULE_ML_COMMENT=11;
     public static final int EOF=-1;
+    public static final int RULE_ID=9;
+    public static final int RULE_WS=14;
+    public static final int RULE_ANY_OTHER=15;
+    public static final int RULE_UPERCASE_LETTER=7;
+    public static final int RULE_INT=10;
+    public static final int RULE_ML_COMMENT=12;
 
     // delegates
     // delegators
@@ -298,11 +299,11 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_5); 
+            otherlv_1=(Token)match(input,16,FOLLOW_5); 
 
             			newLeafNode(otherlv_1, grammarAccess.getUser_StoryAccess().getColonKeyword_1());
             		
-            otherlv_2=(Token)match(input,16,FOLLOW_6); 
+            otherlv_2=(Token)match(input,17,FOLLOW_6); 
 
             			newLeafNode(otherlv_2, grammarAccess.getUser_StoryAccess().getUmKeyword_2());
             		
@@ -337,7 +338,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_6); 
+            otherlv_4=(Token)match(input,18,FOLLOW_6); 
 
             			newLeafNode(otherlv_4, grammarAccess.getUser_StoryAccess().getMöchteIchAlsKeyword_4());
             		
@@ -403,7 +404,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,18,FOLLOW_2); 
+            otherlv_7=(Token)match(input,19,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getUser_StoryAccess().getFullStopKeyword_7());
             		
@@ -728,28 +729,28 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRolle"
-    // InternalMyDsl.g:329:1: ruleRolle returns [EObject current=null] : ( (lv_substantiv_0_0= RULE_UPPERCASE_WORD ) ) ;
+    // InternalMyDsl.g:329:1: ruleRolle returns [EObject current=null] : ( (lv_role_0_0= RULE_UPPERCASE_WORD ) ) ;
     public final EObject ruleRolle() throws RecognitionException {
         EObject current = null;
 
-        Token lv_substantiv_0_0=null;
+        Token lv_role_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalMyDsl.g:335:2: ( ( (lv_substantiv_0_0= RULE_UPPERCASE_WORD ) ) )
-            // InternalMyDsl.g:336:2: ( (lv_substantiv_0_0= RULE_UPPERCASE_WORD ) )
+            // InternalMyDsl.g:335:2: ( ( (lv_role_0_0= RULE_UPPERCASE_WORD ) ) )
+            // InternalMyDsl.g:336:2: ( (lv_role_0_0= RULE_UPPERCASE_WORD ) )
             {
-            // InternalMyDsl.g:336:2: ( (lv_substantiv_0_0= RULE_UPPERCASE_WORD ) )
-            // InternalMyDsl.g:337:3: (lv_substantiv_0_0= RULE_UPPERCASE_WORD )
+            // InternalMyDsl.g:336:2: ( (lv_role_0_0= RULE_UPPERCASE_WORD ) )
+            // InternalMyDsl.g:337:3: (lv_role_0_0= RULE_UPPERCASE_WORD )
             {
-            // InternalMyDsl.g:337:3: (lv_substantiv_0_0= RULE_UPPERCASE_WORD )
-            // InternalMyDsl.g:338:4: lv_substantiv_0_0= RULE_UPPERCASE_WORD
+            // InternalMyDsl.g:337:3: (lv_role_0_0= RULE_UPPERCASE_WORD )
+            // InternalMyDsl.g:338:4: lv_role_0_0= RULE_UPPERCASE_WORD
             {
-            lv_substantiv_0_0=(Token)match(input,RULE_UPPERCASE_WORD,FOLLOW_2); 
+            lv_role_0_0=(Token)match(input,RULE_UPPERCASE_WORD,FOLLOW_2); 
 
-            				newLeafNode(lv_substantiv_0_0, grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0());
+            				newLeafNode(lv_role_0_0, grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0());
             			
 
             				if (current==null) {
@@ -757,8 +758,8 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             				}
             				setWithLastConsumed(
             					current,
-            					"substantiv",
-            					lv_substantiv_0_0,
+            					"role",
+            					lv_role_0_0,
             					"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
             			
 
@@ -1022,11 +1023,11 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
 
 }

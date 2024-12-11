@@ -44,7 +44,7 @@ public class MyDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTitleAccess().getInfinitivAssignment_1(), "rule__Title__InfinitivAssignment_1");
 			builder.put(grammarAccess.getNutzenAccess().getSubjectAssignment_0(), "rule__Nutzen__SubjectAssignment_0");
 			builder.put(grammarAccess.getNutzenAccess().getVerbAssignment_1(), "rule__Nutzen__VerbAssignment_1");
-			builder.put(grammarAccess.getRolleAccess().getSubstantivAssignment(), "rule__Rolle__SubstantivAssignment");
+			builder.put(grammarAccess.getRolleAccess().getRoleAssignment(), "rule__Rolle__RoleAssignment");
 			builder.put(grammarAccess.getZiel_WunschAccess().getGoalAssignment_0(), "rule__Ziel_Wunsch__GoalAssignment_0");
 			builder.put(grammarAccess.getZiel_WunschAccess().getInfinitivAssignment_1(), "rule__Ziel_Wunsch__InfinitivAssignment_1");
 			builder.put(grammarAccess.getInfinitivAccess().getWordAssignment(), "rule__Infinitiv__WordAssignment");

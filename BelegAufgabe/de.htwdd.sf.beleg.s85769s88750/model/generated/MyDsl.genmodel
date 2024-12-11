@@ -24,7 +24,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Nutzen/verb"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Rolle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Rolle/substantiv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Rolle/role"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Ziel_Wunsch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Ziel_Wunsch/goal"/>

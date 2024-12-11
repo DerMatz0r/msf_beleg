@@ -225,13 +225,13 @@ public interface MyDslPackage extends EPackage
   int ROLLE = 4;
 
   /**
-   * The feature id for the '<em><b>Substantiv</b></em>' attribute.
+   * The feature id for the '<em><b>Role</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROLLE__SUBSTANTIV = 0;
+  int ROLLE__ROLE = 0;
 
   /**
    * The number of structural features of the '<em>Rolle</em>' class.
@@ -458,15 +458,15 @@ public interface MyDslPackage extends EPackage
   EClass getRolle();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv <em>Substantiv</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Substantiv</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv()
+   * @return the meta object for the attribute '<em>Role</em>'.
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole()
    * @see #getRolle()
    * @generated
    */
-  EAttribute getRolle_Substantiv();
+  EAttribute getRolle_Role();
 
   /**
    * Returns the meta object for class '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch <em>Ziel Wunsch</em>}'.
@@ -667,12 +667,12 @@ public interface MyDslPackage extends EPackage
     EClass ROLLE = eINSTANCE.getRolle();
 
     /**
-     * The meta object literal for the '<em><b>Substantiv</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Role</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROLLE__SUBSTANTIV = eINSTANCE.getRolle_Substantiv();
+    EAttribute ROLLE__ROLE = eINSTANCE.getRolle_Role();
 
     /**
      * The meta object literal for the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl <em>Ziel Wunsch</em>}' class.
