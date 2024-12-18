@@ -15,15 +15,13 @@ Nutzen:
 	subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
 
 Rolle:
-	role=UPPERCASE_WORD;
+	substantiv=UPPERCASE_WORD;
 
 Ziel_Wunsch:
-	goal=UPPERCASE_WORD infinitiv=Infinitiv;
+	subject=UPPERCASE_WORD infinitiv=Infinitiv;
 
 Infinitiv:
 	word=LOWERCASE_WORD;
-	
-terminal zu: 'zu';
 
 terminal UPPERCASE_WORD:
 	UPERCASE_LETTER LOWERCASE_LETTER+;

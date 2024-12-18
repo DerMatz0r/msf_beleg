@@ -172,9 +172,9 @@ ruleRolle
 	}
 	:
 	(
-		{ before(grammarAccess.getRolleAccess().getRoleAssignment()); }
-		(rule__Rolle__RoleAssignment)
-		{ after(grammarAccess.getRolleAccess().getRoleAssignment()); }
+		{ before(grammarAccess.getRolleAccess().getSubstantivAssignment()); }
+		(rule__Rolle__SubstantivAssignment)
+		{ after(grammarAccess.getRolleAccess().getSubstantivAssignment()); }
 	)
 ;
 finally {
@@ -573,9 +573,9 @@ rule__Ziel_Wunsch__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getZiel_WunschAccess().getGoalAssignment_0()); }
-	(rule__Ziel_Wunsch__GoalAssignment_0)
-	{ after(grammarAccess.getZiel_WunschAccess().getGoalAssignment_0()); }
+	{ before(grammarAccess.getZiel_WunschAccess().getSubjectAssignment_0()); }
+	(rule__Ziel_Wunsch__SubjectAssignment_0)
+	{ after(grammarAccess.getZiel_WunschAccess().getSubjectAssignment_0()); }
 )
 ;
 finally {
@@ -744,30 +744,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Rolle__RoleAssignment
+rule__Rolle__SubstantivAssignment
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0()); }
+		{ before(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); }
 		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0()); }
+		{ after(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Ziel_Wunsch__GoalAssignment_0
+rule__Ziel_Wunsch__SubjectAssignment_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
 		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0()); }
+		{ after(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
 	)
 ;
 finally {
@@ -803,8 +803,6 @@ rule__Infinitiv__WordAssignment
 finally {
 	restoreStackSize(stackSize);
 }
-
-RULE_ZU : 'zu';
 
 RULE_UPPERCASE_WORD : RULE_UPERCASE_LETTER RULE_LOWERCASE_LETTER+;
 

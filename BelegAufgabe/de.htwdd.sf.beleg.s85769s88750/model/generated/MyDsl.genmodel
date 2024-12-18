@@ -24,10 +24,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Nutzen/verb"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Rolle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Rolle/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Rolle/substantiv"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Ziel_Wunsch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Ziel_Wunsch/goal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Ziel_Wunsch/subject"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Ziel_Wunsch/infinitiv"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Infinitiv">

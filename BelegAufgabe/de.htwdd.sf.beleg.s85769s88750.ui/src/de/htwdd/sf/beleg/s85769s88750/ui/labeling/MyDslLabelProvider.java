@@ -26,21 +26,22 @@ public class MyDslLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 
-	String text(User_Story ele) {
-		return "User Story : " + ele.getTitle().getSubstantiv() + " " + ele.getTitle().getInfinitiv().getWord();
-	}
- 
-	String text(Title ele) {
-		return "Title : " + ele.getSubstantiv() + " " + ele.getInfinitiv().getWord();
-	}
-	String text(Rolle ele) {
-		return "Rolle : " + ele.getRole();
-	}
-	String text(Nutzen ele) {
-		return "Nutzen : " + ele.getSubject() + " "+ ele.getVerb();
-	}
-	String text(Ziel_Wunsch ele) {
-		return "Ziel und Wunsch : " + ele.getGoal() + " "+ ele.getInfinitiv().getWord();
-	}
+	// Labels and icons can be computed like this:
+		String text(User_Story ele) {
+			return "User Story : " + ele.getTitle().getSubstantiv() + " " + ele.getTitle().getInfinitiv().getWord();
+		}
+	 
+		String text(Title ele) {
+			return "Title : " + ele.getSubstantiv() + " " + ele.getInfinitiv().getWord();
+		}
+		String text(Rolle ele) {
+			return "Rolle : " + ele.getSubstantiv();
+		}
+		String text(Nutzen ele) {
+			return "Nutzen : " + ele.getSubject() + " "+ ele.getVerb();
+		}
+		String text(Ziel_Wunsch ele) {
+			return "Ziel und Wunsch : " + ele.getSubject() + " "+ ele.getInfinitiv().getWord();
+		}
 	
 }

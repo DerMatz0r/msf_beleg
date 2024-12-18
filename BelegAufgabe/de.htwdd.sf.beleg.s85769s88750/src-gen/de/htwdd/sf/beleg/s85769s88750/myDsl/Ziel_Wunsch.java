@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getGoal <em>Goal</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getSubject <em>Subject</em>}</li>
  *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv <em>Infinitiv</em>}</li>
  * </ul>
  *
@@ -25,26 +25,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface Ziel_Wunsch extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Goal</b></em>' attribute.
+   * Returns the value of the '<em><b>Subject</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Goal</em>' attribute.
-   * @see #setGoal(String)
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getZiel_Wunsch_Goal()
+   * @return the value of the '<em>Subject</em>' attribute.
+   * @see #setSubject(String)
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getZiel_Wunsch_Subject()
    * @model
    * @generated
    */
-  String getGoal();
+  String getSubject();
 
   /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getGoal <em>Goal</em>}' attribute.
+   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getSubject <em>Subject</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Goal</em>' attribute.
-   * @see #getGoal()
+   * @param value the new value of the '<em>Subject</em>' attribute.
+   * @see #getSubject()
    * @generated
    */
-  void setGoal(String value);
+  void setSubject(String value);
 
   /**
    * Returns the value of the '<em><b>Infinitiv</b></em>' containment reference.

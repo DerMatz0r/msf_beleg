@@ -335,9 +335,9 @@ ruleRolle returns [EObject current=null]
 }:
 	(
 		(
-			lv_role_0_0=RULE_UPPERCASE_WORD
+			lv_substantiv_0_0=RULE_UPPERCASE_WORD
 			{
-				newLeafNode(lv_role_0_0, grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0());
+				newLeafNode(lv_substantiv_0_0, grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0());
 			}
 			{
 				if ($current==null) {
@@ -345,8 +345,8 @@ ruleRolle returns [EObject current=null]
 				}
 				setWithLastConsumed(
 					$current,
-					"role",
-					lv_role_0_0,
+					"substantiv",
+					lv_substantiv_0_0,
 					"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
 			}
 		)
@@ -371,9 +371,9 @@ ruleZiel_Wunsch returns [EObject current=null]
 	(
 		(
 			(
-				lv_goal_0_0=RULE_UPPERCASE_WORD
+				lv_subject_0_0=RULE_UPPERCASE_WORD
 				{
-					newLeafNode(lv_goal_0_0, grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0());
+					newLeafNode(lv_subject_0_0, grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -381,8 +381,8 @@ ruleZiel_Wunsch returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"goal",
-						lv_goal_0_0,
+						"subject",
+						lv_subject_0_0,
 						"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
 				}
 			)
@@ -443,8 +443,6 @@ ruleInfinitiv returns [EObject current=null]
 		)
 	)
 ;
-
-RULE_ZU : 'zu';
 
 RULE_UPPERCASE_WORD : RULE_UPERCASE_LETTER RULE_LOWERCASE_LETTER+;
 

@@ -225,13 +225,13 @@ public interface MyDslPackage extends EPackage
   int ROLLE = 4;
 
   /**
-   * The feature id for the '<em><b>Role</b></em>' attribute.
+   * The feature id for the '<em><b>Substantiv</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROLLE__ROLE = 0;
+  int ROLLE__SUBSTANTIV = 0;
 
   /**
    * The number of structural features of the '<em>Rolle</em>' class.
@@ -253,13 +253,13 @@ public interface MyDslPackage extends EPackage
   int ZIEL_WUNSCH = 5;
 
   /**
-   * The feature id for the '<em><b>Goal</b></em>' attribute.
+   * The feature id for the '<em><b>Subject</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZIEL_WUNSCH__GOAL = 0;
+  int ZIEL_WUNSCH__SUBJECT = 0;
 
   /**
    * The feature id for the '<em><b>Infinitiv</b></em>' containment reference.
@@ -458,15 +458,15 @@ public interface MyDslPackage extends EPackage
   EClass getRolle();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole <em>Role</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv <em>Substantiv</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Role</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole()
+   * @return the meta object for the attribute '<em>Substantiv</em>'.
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv()
    * @see #getRolle()
    * @generated
    */
-  EAttribute getRolle_Role();
+  EAttribute getRolle_Substantiv();
 
   /**
    * Returns the meta object for class '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch <em>Ziel Wunsch</em>}'.
@@ -479,15 +479,15 @@ public interface MyDslPackage extends EPackage
   EClass getZiel_Wunsch();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getGoal <em>Goal</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getSubject <em>Subject</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Goal</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getGoal()
+   * @return the meta object for the attribute '<em>Subject</em>'.
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getSubject()
    * @see #getZiel_Wunsch()
    * @generated
    */
-  EAttribute getZiel_Wunsch_Goal();
+  EAttribute getZiel_Wunsch_Subject();
 
   /**
    * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv <em>Infinitiv</em>}'.
@@ -667,12 +667,12 @@ public interface MyDslPackage extends EPackage
     EClass ROLLE = eINSTANCE.getRolle();
 
     /**
-     * The meta object literal for the '<em><b>Role</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Substantiv</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ROLLE__ROLE = eINSTANCE.getRolle_Role();
+    EAttribute ROLLE__SUBSTANTIV = eINSTANCE.getRolle_Substantiv();
 
     /**
      * The meta object literal for the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl <em>Ziel Wunsch</em>}' class.
@@ -685,12 +685,12 @@ public interface MyDslPackage extends EPackage
     EClass ZIEL_WUNSCH = eINSTANCE.getZiel_Wunsch();
 
     /**
-     * The meta object literal for the '<em><b>Goal</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Subject</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ZIEL_WUNSCH__GOAL = eINSTANCE.getZiel_Wunsch_Goal();
+    EAttribute ZIEL_WUNSCH__SUBJECT = eINSTANCE.getZiel_Wunsch_Subject();
 
     /**
      * The meta object literal for the '<em><b>Infinitiv</b></em>' containment reference feature.

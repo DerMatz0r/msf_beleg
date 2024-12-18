@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getGoal <em>Goal</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getSubject <em>Subject</em>}</li>
  *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getInfinitiv <em>Infinitiv</em>}</li>
  * </ul>
  *
@@ -33,24 +33,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Ziel_Wunsch
 {
   /**
-   * The default value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+   * The default value of the '{@link #getSubject() <em>Subject</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGoal()
+   * @see #getSubject()
    * @generated
    * @ordered
    */
-  protected static final String GOAL_EDEFAULT = null;
+  protected static final String SUBJECT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+   * The cached value of the '{@link #getSubject() <em>Subject</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGoal()
+   * @see #getSubject()
    * @generated
    * @ordered
    */
-  protected String goal = GOAL_EDEFAULT;
+  protected String subject = SUBJECT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getInfinitiv() <em>Infinitiv</em>}' containment reference.
@@ -89,9 +89,9 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
    * @generated
    */
   @Override
-  public String getGoal()
+  public String getSubject()
   {
-    return goal;
+    return subject;
   }
 
   /**
@@ -100,12 +100,12 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
    * @generated
    */
   @Override
-  public void setGoal(String newGoal)
+  public void setSubject(String newSubject)
   {
-    String oldGoal = goal;
-    goal = newGoal;
+    String oldSubject = subject;
+    subject = newSubject;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ZIEL_WUNSCH__GOAL, oldGoal, goal));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ZIEL_WUNSCH__SUBJECT, oldSubject, subject));
   }
 
   /**
@@ -184,8 +184,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
   {
     switch (featureID)
     {
-      case MyDslPackage.ZIEL_WUNSCH__GOAL:
-        return getGoal();
+      case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
+        return getSubject();
       case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
         return getInfinitiv();
     }
@@ -202,8 +202,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
   {
     switch (featureID)
     {
-      case MyDslPackage.ZIEL_WUNSCH__GOAL:
-        setGoal((String)newValue);
+      case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
+        setSubject((String)newValue);
         return;
       case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
         setInfinitiv((Infinitiv)newValue);
@@ -222,8 +222,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
   {
     switch (featureID)
     {
-      case MyDslPackage.ZIEL_WUNSCH__GOAL:
-        setGoal(GOAL_EDEFAULT);
+      case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
+        setSubject(SUBJECT_EDEFAULT);
         return;
       case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
         setInfinitiv((Infinitiv)null);
@@ -242,8 +242,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
   {
     switch (featureID)
     {
-      case MyDslPackage.ZIEL_WUNSCH__GOAL:
-        return GOAL_EDEFAULT == null ? goal != null : !GOAL_EDEFAULT.equals(goal);
+      case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
+        return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
       case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
         return infinitiv != null;
     }
@@ -261,8 +261,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (goal: ");
-    result.append(goal);
+    result.append(" (subject: ");
+    result.append(subject);
     result.append(')');
     return result.toString();
   }

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.RolleImpl#getRole <em>Role</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.RolleImpl#getSubstantiv <em>Substantiv</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +29,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
 {
   /**
-   * The default value of the '{@link #getRole() <em>Role</em>}' attribute.
+   * The default value of the '{@link #getSubstantiv() <em>Substantiv</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRole()
+   * @see #getSubstantiv()
    * @generated
    * @ordered
    */
-  protected static final String ROLE_EDEFAULT = null;
+  protected static final String SUBSTANTIV_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRole() <em>Role</em>}' attribute.
+   * The cached value of the '{@link #getSubstantiv() <em>Substantiv</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRole()
+   * @see #getSubstantiv()
    * @generated
    * @ordered
    */
-  protected String role = ROLE_EDEFAULT;
+  protected String substantiv = SUBSTANTIV_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,9 +75,9 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
    * @generated
    */
   @Override
-  public String getRole()
+  public String getSubstantiv()
   {
-    return role;
+    return substantiv;
   }
 
   /**
@@ -86,12 +86,12 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
    * @generated
    */
   @Override
-  public void setRole(String newRole)
+  public void setSubstantiv(String newSubstantiv)
   {
-    String oldRole = role;
-    role = newRole;
+    String oldSubstantiv = substantiv;
+    substantiv = newSubstantiv;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ROLLE__ROLE, oldRole, role));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ROLLE__SUBSTANTIV, oldSubstantiv, substantiv));
   }
 
   /**
@@ -104,8 +104,8 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
   {
     switch (featureID)
     {
-      case MyDslPackage.ROLLE__ROLE:
-        return getRole();
+      case MyDslPackage.ROLLE__SUBSTANTIV:
+        return getSubstantiv();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +120,8 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
   {
     switch (featureID)
     {
-      case MyDslPackage.ROLLE__ROLE:
-        setRole((String)newValue);
+      case MyDslPackage.ROLLE__SUBSTANTIV:
+        setSubstantiv((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +137,8 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
   {
     switch (featureID)
     {
-      case MyDslPackage.ROLLE__ROLE:
-        setRole(ROLE_EDEFAULT);
+      case MyDslPackage.ROLLE__SUBSTANTIV:
+        setSubstantiv(SUBSTANTIV_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +154,8 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
   {
     switch (featureID)
     {
-      case MyDslPackage.ROLLE__ROLE:
-        return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
+      case MyDslPackage.ROLLE__SUBSTANTIV:
+        return SUBSTANTIV_EDEFAULT == null ? substantiv != null : !SUBSTANTIV_EDEFAULT.equals(substantiv);
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +171,8 @@ public class RolleImpl extends MinimalEObjectImpl.Container implements Rolle
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (role: ");
-    result.append(role);
+    result.append(" (substantiv: ");
+    result.append(substantiv);
     result.append(')');
     return result.toString();
   }

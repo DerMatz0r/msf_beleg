@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole <em>Role</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv <em>Substantiv</em>}</li>
  * </ul>
  *
  * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getRolle()
@@ -24,25 +24,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface Rolle extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Role</b></em>' attribute.
+   * Returns the value of the '<em><b>Substantiv</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Role</em>' attribute.
-   * @see #setRole(String)
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getRolle_Role()
+   * @return the value of the '<em>Substantiv</em>' attribute.
+   * @see #setSubstantiv(String)
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getRolle_Substantiv()
    * @model
    * @generated
    */
-  String getRole();
+  String getSubstantiv();
 
   /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getRole <em>Role</em>}' attribute.
+   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Rolle#getSubstantiv <em>Substantiv</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Role</em>' attribute.
-   * @see #getRole()
+   * @param value the new value of the '<em>Substantiv</em>' attribute.
+   * @see #getSubstantiv()
    * @generated
    */
-  void setRole(String value);
+  void setSubstantiv(String value);
 
 } // Rolle

@@ -113,16 +113,16 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Rolle returns Rolle
 	 *
 	 * Constraint:
-	 *     role=UPPERCASE_WORD
+	 *     substantiv=UPPERCASE_WORD
 	 * </pre>
 	 */
 	protected void sequence_Rolle(ISerializationContext context, Rolle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ROLLE__ROLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ROLLE__ROLE));
+			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ROLLE__SUBSTANTIV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ROLLE__SUBSTANTIV));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0(), semanticObject.getRole());
+		feeder.accept(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0(), semanticObject.getSubstantiv());
 		feeder.finish();
 	}
 	
@@ -199,18 +199,18 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Ziel_Wunsch returns Ziel_Wunsch
 	 *
 	 * Constraint:
-	 *     (goal=UPPERCASE_WORD infinitiv=Infinitiv)
+	 *     (subject=UPPERCASE_WORD infinitiv=Infinitiv)
 	 * </pre>
 	 */
 	protected void sequence_Ziel_Wunsch(ISerializationContext context, Ziel_Wunsch semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__GOAL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__GOAL));
+			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__SUBJECT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__SUBJECT));
 			if (transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__INFINITIV) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.ZIEL_WUNSCH__INFINITIV));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0(), semanticObject.getGoal());
+		feeder.accept(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0(), semanticObject.getSubject());
 		feeder.accept(grammarAccess.getZiel_WunschAccess().getInfinitivInfinitivParserRuleCall_1_0(), semanticObject.getInfinitiv());
 		feeder.finish();
 	}

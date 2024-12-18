@@ -22,25 +22,24 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UPPERCASE_WORD", "RULE_LOWERCASE_WORD", "RULE_ZU", "RULE_UPERCASE_LETTER", "RULE_LOWERCASE_LETTER", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "':'", "'Um'", "', m\\u00F6chte ich als'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UPPERCASE_WORD", "RULE_LOWERCASE_WORD", "RULE_UPERCASE_LETTER", "RULE_LOWERCASE_LETTER", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "':'", "'Um'", "', m\\u00F6chte ich als'", "'.'"
     };
     public static final int RULE_LOWERCASE_WORD=5;
-    public static final int RULE_ZU=6;
-    public static final int RULE_STRING=11;
-    public static final int RULE_LOWERCASE_LETTER=8;
-    public static final int RULE_SL_COMMENT=13;
-    public static final int T__19=19;
+    public static final int RULE_ID=8;
+    public static final int RULE_WS=13;
+    public static final int RULE_STRING=10;
+    public static final int RULE_ANY_OTHER=14;
+    public static final int RULE_LOWERCASE_LETTER=7;
+    public static final int RULE_SL_COMMENT=12;
+    public static final int RULE_UPERCASE_LETTER=6;
+    public static final int T__15=15;
     public static final int T__16=16;
     public static final int RULE_UPPERCASE_WORD=4;
     public static final int T__17=17;
+    public static final int RULE_INT=9;
     public static final int T__18=18;
+    public static final int RULE_ML_COMMENT=11;
     public static final int EOF=-1;
-    public static final int RULE_ID=9;
-    public static final int RULE_WS=14;
-    public static final int RULE_ANY_OTHER=15;
-    public static final int RULE_UPERCASE_LETTER=7;
-    public static final int RULE_INT=10;
-    public static final int RULE_ML_COMMENT=12;
 
     // delegates
     // delegators
@@ -459,31 +458,31 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRolle"
-    // InternalMyDsl.g:169:1: ruleRolle : ( ( rule__Rolle__RoleAssignment ) ) ;
+    // InternalMyDsl.g:169:1: ruleRolle : ( ( rule__Rolle__SubstantivAssignment ) ) ;
     public final void ruleRolle() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:173:2: ( ( ( rule__Rolle__RoleAssignment ) ) )
-            // InternalMyDsl.g:174:2: ( ( rule__Rolle__RoleAssignment ) )
+            // InternalMyDsl.g:173:2: ( ( ( rule__Rolle__SubstantivAssignment ) ) )
+            // InternalMyDsl.g:174:2: ( ( rule__Rolle__SubstantivAssignment ) )
             {
-            // InternalMyDsl.g:174:2: ( ( rule__Rolle__RoleAssignment ) )
-            // InternalMyDsl.g:175:3: ( rule__Rolle__RoleAssignment )
+            // InternalMyDsl.g:174:2: ( ( rule__Rolle__SubstantivAssignment ) )
+            // InternalMyDsl.g:175:3: ( rule__Rolle__SubstantivAssignment )
             {
-             before(grammarAccess.getRolleAccess().getRoleAssignment()); 
-            // InternalMyDsl.g:176:3: ( rule__Rolle__RoleAssignment )
-            // InternalMyDsl.g:176:4: rule__Rolle__RoleAssignment
+             before(grammarAccess.getRolleAccess().getSubstantivAssignment()); 
+            // InternalMyDsl.g:176:3: ( rule__Rolle__SubstantivAssignment )
+            // InternalMyDsl.g:176:4: rule__Rolle__SubstantivAssignment
             {
             pushFollow(FOLLOW_2);
-            rule__Rolle__RoleAssignment();
+            rule__Rolle__SubstantivAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRolleAccess().getRoleAssignment()); 
+             after(grammarAccess.getRolleAccess().getSubstantivAssignment()); 
 
             }
 
@@ -796,7 +795,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:279:2: ':'
             {
              before(grammarAccess.getUser_StoryAccess().getColonKeyword_1()); 
-            match(input,16,FOLLOW_2); 
+            match(input,15,FOLLOW_2); 
              after(grammarAccess.getUser_StoryAccess().getColonKeyword_1()); 
 
             }
@@ -871,7 +870,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:306:2: 'Um'
             {
              before(grammarAccess.getUser_StoryAccess().getUmKeyword_2()); 
-            match(input,17,FOLLOW_2); 
+            match(input,16,FOLLOW_2); 
              after(grammarAccess.getUser_StoryAccess().getUmKeyword_2()); 
 
             }
@@ -1031,7 +1030,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:360:2: ', m\\u00F6chte ich als'
             {
              before(grammarAccess.getUser_StoryAccess().getMöchteIchAlsKeyword_4()); 
-            match(input,18,FOLLOW_2); 
+            match(input,17,FOLLOW_2); 
              after(grammarAccess.getUser_StoryAccess().getMöchteIchAlsKeyword_4()); 
 
             }
@@ -1271,7 +1270,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:440:2: '.'
             {
              before(grammarAccess.getUser_StoryAccess().getFullStopKeyword_7()); 
-            match(input,19,FOLLOW_2); 
+            match(input,18,FOLLOW_2); 
              after(grammarAccess.getUser_StoryAccess().getFullStopKeyword_7()); 
 
             }
@@ -1663,31 +1662,31 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ziel_Wunsch__Group__0__Impl"
-    // InternalMyDsl.g:570:1: rule__Ziel_Wunsch__Group__0__Impl : ( ( rule__Ziel_Wunsch__GoalAssignment_0 ) ) ;
+    // InternalMyDsl.g:570:1: rule__Ziel_Wunsch__Group__0__Impl : ( ( rule__Ziel_Wunsch__SubjectAssignment_0 ) ) ;
     public final void rule__Ziel_Wunsch__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:574:1: ( ( ( rule__Ziel_Wunsch__GoalAssignment_0 ) ) )
-            // InternalMyDsl.g:575:1: ( ( rule__Ziel_Wunsch__GoalAssignment_0 ) )
+            // InternalMyDsl.g:574:1: ( ( ( rule__Ziel_Wunsch__SubjectAssignment_0 ) ) )
+            // InternalMyDsl.g:575:1: ( ( rule__Ziel_Wunsch__SubjectAssignment_0 ) )
             {
-            // InternalMyDsl.g:575:1: ( ( rule__Ziel_Wunsch__GoalAssignment_0 ) )
-            // InternalMyDsl.g:576:2: ( rule__Ziel_Wunsch__GoalAssignment_0 )
+            // InternalMyDsl.g:575:1: ( ( rule__Ziel_Wunsch__SubjectAssignment_0 ) )
+            // InternalMyDsl.g:576:2: ( rule__Ziel_Wunsch__SubjectAssignment_0 )
             {
-             before(grammarAccess.getZiel_WunschAccess().getGoalAssignment_0()); 
-            // InternalMyDsl.g:577:2: ( rule__Ziel_Wunsch__GoalAssignment_0 )
-            // InternalMyDsl.g:577:3: rule__Ziel_Wunsch__GoalAssignment_0
+             before(grammarAccess.getZiel_WunschAccess().getSubjectAssignment_0()); 
+            // InternalMyDsl.g:577:2: ( rule__Ziel_Wunsch__SubjectAssignment_0 )
+            // InternalMyDsl.g:577:3: rule__Ziel_Wunsch__SubjectAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__Ziel_Wunsch__GoalAssignment_0();
+            rule__Ziel_Wunsch__SubjectAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getZiel_WunschAccess().getGoalAssignment_0()); 
+             after(grammarAccess.getZiel_WunschAccess().getSubjectAssignment_0()); 
 
             }
 
@@ -2146,9 +2145,9 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Nutzen__VerbAssignment_1"
 
 
-    // $ANTLR start "rule__Rolle__RoleAssignment"
-    // InternalMyDsl.g:747:1: rule__Rolle__RoleAssignment : ( RULE_UPPERCASE_WORD ) ;
-    public final void rule__Rolle__RoleAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Rolle__SubstantivAssignment"
+    // InternalMyDsl.g:747:1: rule__Rolle__SubstantivAssignment : ( RULE_UPPERCASE_WORD ) ;
+    public final void rule__Rolle__SubstantivAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2159,9 +2158,9 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:752:2: ( RULE_UPPERCASE_WORD )
             // InternalMyDsl.g:753:3: RULE_UPPERCASE_WORD
             {
-             before(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0()); 
+             before(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); 
             match(input,RULE_UPPERCASE_WORD,FOLLOW_2); 
-             after(grammarAccess.getRolleAccess().getRoleUPPERCASE_WORDTerminalRuleCall_0()); 
+             after(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); 
 
             }
 
@@ -2180,12 +2179,12 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Rolle__RoleAssignment"
+    // $ANTLR end "rule__Rolle__SubstantivAssignment"
 
 
-    // $ANTLR start "rule__Ziel_Wunsch__GoalAssignment_0"
-    // InternalMyDsl.g:762:1: rule__Ziel_Wunsch__GoalAssignment_0 : ( RULE_UPPERCASE_WORD ) ;
-    public final void rule__Ziel_Wunsch__GoalAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Ziel_Wunsch__SubjectAssignment_0"
+    // InternalMyDsl.g:762:1: rule__Ziel_Wunsch__SubjectAssignment_0 : ( RULE_UPPERCASE_WORD ) ;
+    public final void rule__Ziel_Wunsch__SubjectAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2196,9 +2195,9 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:767:2: ( RULE_UPPERCASE_WORD )
             // InternalMyDsl.g:768:3: RULE_UPPERCASE_WORD
             {
-             before(grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); 
             match(input,RULE_UPPERCASE_WORD,FOLLOW_2); 
-             after(grammarAccess.getZiel_WunschAccess().getGoalUPPERCASE_WORDTerminalRuleCall_0_0()); 
+             after(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); 
 
             }
 
@@ -2217,7 +2216,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Ziel_Wunsch__GoalAssignment_0"
+    // $ANTLR end "rule__Ziel_Wunsch__SubjectAssignment_0"
 
 
     // $ANTLR start "rule__Ziel_Wunsch__InfinitivAssignment_1"
@@ -2305,11 +2304,11 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
 
 }

@@ -3,10 +3,19 @@
  */
 package de.htwdd.sf.beleg.s85769s88750.generator;
 
+import com.google.common.collect.Iterators;
+import de.htwdd.sf.beleg.s85769s88750.myDsl.User_Story;
+import java.io.FileWriter;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.InputOutput;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +26,78 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class MyDslGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    final List<User_Story> userStories = IteratorExtensions.<User_Story>toList(Iterators.<User_Story>filter(resource.getAllContents(), User_Story.class));
+    InputOutput.<String>println("------------------------------------------------");
+    InputOutput.<String>println("Titel:");
+    InputOutput.<String>println(userStories.get(0).getTitle().getSubstantiv());
+    InputOutput.<String>println(userStories.get(0).getTitle().getInfinitiv().getWord());
+    InputOutput.<String>println("Rolle");
+    InputOutput.<String>println(userStories.get(0).getRolle().getSubstantiv());
+    InputOutput.<String>println("Ziel/Wunsch");
+    InputOutput.<String>println(userStories.get(0).getZiel_wunsch().getSubject());
+    InputOutput.<String>println(userStories.get(0).getZiel_wunsch().getInfinitiv().getWord());
+    InputOutput.<String>println("Nutzen");
+    InputOutput.<String>println(userStories.get(0).getNutzen().getSubject());
+    final String verb = this.getInfinitiv(userStories.get(0).getNutzen().getVerb());
+    InputOutput.<String>println(verb);
+    this.createCSV(userStories);
+  }
+
+  public String getInfinitiv(final String input) {
+    Object _xblockexpression = null;
+    {
+      final String regex = "^(.*?zu)(.*?)zu(.*)$";
+      final Pattern pattern = Pattern.compile(regex);
+      final Matcher matcher = pattern.matcher(input);
+      Object _xifexpression = null;
+      boolean _matches = matcher.matches();
+      if (_matches) {
+        final String group1 = matcher.group(1);
+        final String group2 = matcher.group(2);
+        final String group3 = matcher.group(3);
+        final String result = (((group1 + group2) + " ") + group3);
+        return result;
+      } else {
+        _xifexpression = null;
+      }
+      _xblockexpression = _xifexpression;
+    }
+    return ((String)_xblockexpression);
+  }
+
+  public void createCSV(final List<User_Story> userStories) {
+    try {
+      final String filePath = "F:/Progammierquatsch/BelegAufgabe/output.csv";
+      final FileWriter writer = new FileWriter(filePath);
+      writer.write("Titel,Rolle,Ziel/Wunsch,Nutzen\n");
+      for (final User_Story userStory : userStories) {
+        {
+          String _substantiv = userStory.getTitle().getSubstantiv();
+          String _plus = (_substantiv + " ");
+          String _word = userStory.getTitle().getInfinitiv().getWord();
+          String _plus_1 = (_plus + _word);
+          String _plus_2 = (_plus_1 + ",");
+          String _substantiv_1 = userStory.getRolle().getSubstantiv();
+          String _plus_3 = (_plus_2 + _substantiv_1);
+          String _plus_4 = (_plus_3 + ",");
+          String _subject = userStory.getZiel_wunsch().getSubject();
+          String _plus_5 = (_plus_4 + _subject);
+          String _plus_6 = (_plus_5 + " ");
+          String _word_1 = userStory.getZiel_wunsch().getInfinitiv().getWord();
+          String _plus_7 = (_plus_6 + _word_1);
+          String _plus_8 = (_plus_7 + ",");
+          String _subject_1 = userStory.getNutzen().getSubject();
+          String _plus_9 = (_plus_8 + _subject_1);
+          String _plus_10 = (_plus_9 + " ");
+          String _infinitiv = this.getInfinitiv(userStory.getNutzen().getVerb());
+          String _plus_11 = (_plus_10 + _infinitiv);
+          final String line = (_plus_11 + "\n");
+          writer.write(line);
+        }
+      }
+      writer.close();
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
   }
 }
