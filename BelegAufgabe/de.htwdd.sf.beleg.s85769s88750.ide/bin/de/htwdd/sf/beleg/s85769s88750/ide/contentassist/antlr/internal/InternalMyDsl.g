@@ -206,31 +206,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleInfinitiv
-entryRuleInfinitiv
-:
-{ before(grammarAccess.getInfinitivRule()); }
-	 ruleInfinitiv
-{ after(grammarAccess.getInfinitivRule()); } 
-	 EOF 
-;
-
-// Rule Infinitiv
-ruleInfinitiv 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getInfinitivAccess().getWordAssignment()); }
-		(rule__Infinitiv__WordAssignment)
-		{ after(grammarAccess.getInfinitivAccess().getWordAssignment()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__User_Story__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -491,9 +466,9 @@ rule__Title__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getTitleAccess().getInfinitivAssignment_1()); }
-	(rule__Title__InfinitivAssignment_1)
-	{ after(grammarAccess.getTitleAccess().getInfinitivAssignment_1()); }
+	{ before(grammarAccess.getTitleAccess().getVerbAssignment_1()); }
+	(rule__Title__VerbAssignment_1)
+	{ after(grammarAccess.getTitleAccess().getVerbAssignment_1()); }
 )
 ;
 finally {
@@ -599,9 +574,9 @@ rule__Ziel_Wunsch__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getZiel_WunschAccess().getInfinitivAssignment_1()); }
-	(rule__Ziel_Wunsch__InfinitivAssignment_1)
-	{ after(grammarAccess.getZiel_WunschAccess().getInfinitivAssignment_1()); }
+	{ before(grammarAccess.getZiel_WunschAccess().getVerbAssignment_1()); }
+	(rule__Ziel_Wunsch__VerbAssignment_1)
+	{ after(grammarAccess.getZiel_WunschAccess().getVerbAssignment_1()); }
 )
 ;
 finally {
@@ -690,24 +665,24 @@ rule__Title__SubstantivAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getTitleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0_0()); }
-		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getTitleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getTitleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0_0()); }
+		RULE_SUBSTANTIV
+		{ after(grammarAccess.getTitleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Title__InfinitivAssignment_1
+rule__Title__VerbAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getTitleAccess().getInfinitivInfinitivParserRuleCall_1_0()); }
-		ruleInfinitiv
-		{ after(grammarAccess.getTitleAccess().getInfinitivInfinitivParserRuleCall_1_0()); }
+		{ before(grammarAccess.getTitleAccess().getVerbVERBTerminalRuleCall_1_0()); }
+		RULE_VERB
+		{ after(grammarAccess.getTitleAccess().getVerbVERBTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -720,9 +695,9 @@ rule__Nutzen__SubjectAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getNutzenAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
-		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getNutzenAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getNutzenAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0()); }
+		RULE_SUBSTANTIV
+		{ after(grammarAccess.getNutzenAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0()); }
 	)
 ;
 finally {
@@ -735,9 +710,9 @@ rule__Nutzen__VerbAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getNutzenAccess().getVerbLOWERCASE_WORDTerminalRuleCall_1_0()); }
-		RULE_LOWERCASE_WORD
-		{ after(grammarAccess.getNutzenAccess().getVerbLOWERCASE_WORDTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getNutzenAccess().getVerbZUZUZUVERBTerminalRuleCall_1_0()); }
+		RULE_ZUZUZUVERB
+		{ after(grammarAccess.getNutzenAccess().getVerbZUZUZUVERBTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -750,9 +725,9 @@ rule__Rolle__SubstantivAssignment
 	}
 :
 	(
-		{ before(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); }
-		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0()); }
+		{ before(grammarAccess.getRolleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0()); }
+		RULE_SUBSTANTIV
+		{ after(grammarAccess.getRolleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0()); }
 	)
 ;
 finally {
@@ -765,52 +740,45 @@ rule__Ziel_Wunsch__SubjectAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
-		RULE_UPPERCASE_WORD
-		{ after(grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getZiel_WunschAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0()); }
+		RULE_SUBSTANTIV
+		{ after(grammarAccess.getZiel_WunschAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Ziel_Wunsch__InfinitivAssignment_1
+rule__Ziel_Wunsch__VerbAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getZiel_WunschAccess().getInfinitivInfinitivParserRuleCall_1_0()); }
-		ruleInfinitiv
-		{ after(grammarAccess.getZiel_WunschAccess().getInfinitivInfinitivParserRuleCall_1_0()); }
+		{ before(grammarAccess.getZiel_WunschAccess().getVerbVERBTerminalRuleCall_1_0()); }
+		RULE_VERB
+		{ after(grammarAccess.getZiel_WunschAccess().getVerbVERBTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Infinitiv__WordAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getInfinitivAccess().getWordLOWERCASE_WORDTerminalRuleCall_0()); }
-		RULE_LOWERCASE_WORD
-		{ after(grammarAccess.getInfinitivAccess().getWordLOWERCASE_WORDTerminalRuleCall_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
+fragment RULE_ANY_BUT_NOT_Z : 'a'..'y';
 
-RULE_UPPERCASE_WORD : RULE_UPERCASE_LETTER RULE_LOWERCASE_LETTER+;
+fragment RULE_ANY_BUT_NOT_U : ('a'..'t'|'v'..'z');
 
-RULE_LOWERCASE_WORD : RULE_LOWERCASE_LETTER+;
+fragment RULE_NOT_ZU : ('a'..'t'|'v'..'y');
 
-fragment RULE_UPERCASE_LETTER : ('A'..'Z'|'\u00C4'|'\u00DC'|'\u00D6');
+fragment RULE_NEW_Z : 'z'+ RULE_NOT_ZU;
 
-fragment RULE_LOWERCASE_LETTER : ('a'..'z'|'\u00E4'|'\u00FC'|'\u00F6'|'\u00DF');
+fragment RULE_NEW_END : 'z'* 'zuzu';
+
+RULE_ZUZUZUVERB : 'zu' (RULE_ANY_BUT_NOT_Z|RULE_NEW_Z)* RULE_NEW_END (RULE_ANY_BUT_NOT_Z|RULE_NEW_Z)* ('en'|'ern'|'eln');
+
+RULE_SUBSTANTIV : ('A'..'Z'|'\u00C4'|'\u00DC'|'\u00D6') ('a'..'z'|'\u00E4'|'\u00FC'|'\u00F6'|'\u00DF')+;
+
+RULE_VERB : ('a'..'z'|'\u00E4'|'\u00F6'|'\u00FC'|'\u00DF')+ ('en'|'ern'|'eln');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

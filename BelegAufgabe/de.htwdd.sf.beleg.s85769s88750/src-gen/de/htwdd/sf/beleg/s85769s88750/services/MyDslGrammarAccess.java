@@ -99,112 +99,97 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.Title");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSubstantivAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cSubstantivUPPERCASE_WORDTerminalRuleCall_0_0 = (RuleCall)cSubstantivAssignment_0.eContents().get(0);
-		private final Assignment cInfinitivAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInfinitivInfinitivParserRuleCall_1_0 = (RuleCall)cInfinitivAssignment_1.eContents().get(0);
+		private final RuleCall cSubstantivSUBSTANTIVTerminalRuleCall_0_0 = (RuleCall)cSubstantivAssignment_0.eContents().get(0);
+		private final Assignment cVerbAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cVerbVERBTerminalRuleCall_1_0 = (RuleCall)cVerbAssignment_1.eContents().get(0);
 		
 		//Title:
-		//    substantiv=UPPERCASE_WORD infinitiv=Infinitiv;
+		//    substantiv=SUBSTANTIV verb=VERB;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//substantiv=UPPERCASE_WORD infinitiv=Infinitiv
+		//substantiv=SUBSTANTIV verb=VERB
 		public Group getGroup() { return cGroup; }
 		
-		//substantiv=UPPERCASE_WORD
+		//substantiv=SUBSTANTIV
 		public Assignment getSubstantivAssignment_0() { return cSubstantivAssignment_0; }
 		
-		//UPPERCASE_WORD
-		public RuleCall getSubstantivUPPERCASE_WORDTerminalRuleCall_0_0() { return cSubstantivUPPERCASE_WORDTerminalRuleCall_0_0; }
+		//SUBSTANTIV
+		public RuleCall getSubstantivSUBSTANTIVTerminalRuleCall_0_0() { return cSubstantivSUBSTANTIVTerminalRuleCall_0_0; }
 		
-		//infinitiv=Infinitiv
-		public Assignment getInfinitivAssignment_1() { return cInfinitivAssignment_1; }
+		//verb=VERB
+		public Assignment getVerbAssignment_1() { return cVerbAssignment_1; }
 		
-		//Infinitiv
-		public RuleCall getInfinitivInfinitivParserRuleCall_1_0() { return cInfinitivInfinitivParserRuleCall_1_0; }
+		//VERB
+		public RuleCall getVerbVERBTerminalRuleCall_1_0() { return cVerbVERBTerminalRuleCall_1_0; }
 	}
 	public class NutzenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.Nutzen");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSubjectAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cSubjectUPPERCASE_WORDTerminalRuleCall_0_0 = (RuleCall)cSubjectAssignment_0.eContents().get(0);
+		private final RuleCall cSubjectSUBSTANTIVTerminalRuleCall_0_0 = (RuleCall)cSubjectAssignment_0.eContents().get(0);
 		private final Assignment cVerbAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVerbLOWERCASE_WORDTerminalRuleCall_1_0 = (RuleCall)cVerbAssignment_1.eContents().get(0);
+		private final RuleCall cVerbZUZUZUVERBTerminalRuleCall_1_0 = (RuleCall)cVerbAssignment_1.eContents().get(0);
 		
 		//Nutzen:
-		//    subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
+		//    subject=SUBSTANTIV verb=ZUZUZUVERB;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//subject=UPPERCASE_WORD verb=LOWERCASE_WORD
+		//subject=SUBSTANTIV verb=ZUZUZUVERB
 		public Group getGroup() { return cGroup; }
 		
-		//subject=UPPERCASE_WORD
+		//subject=SUBSTANTIV
 		public Assignment getSubjectAssignment_0() { return cSubjectAssignment_0; }
 		
-		//UPPERCASE_WORD
-		public RuleCall getSubjectUPPERCASE_WORDTerminalRuleCall_0_0() { return cSubjectUPPERCASE_WORDTerminalRuleCall_0_0; }
+		//SUBSTANTIV
+		public RuleCall getSubjectSUBSTANTIVTerminalRuleCall_0_0() { return cSubjectSUBSTANTIVTerminalRuleCall_0_0; }
 		
-		//verb=LOWERCASE_WORD
+		//verb=ZUZUZUVERB
 		public Assignment getVerbAssignment_1() { return cVerbAssignment_1; }
 		
-		//LOWERCASE_WORD
-		public RuleCall getVerbLOWERCASE_WORDTerminalRuleCall_1_0() { return cVerbLOWERCASE_WORDTerminalRuleCall_1_0; }
+		//ZUZUZUVERB
+		public RuleCall getVerbZUZUZUVERBTerminalRuleCall_1_0() { return cVerbZUZUZUVERBTerminalRuleCall_1_0; }
 	}
 	public class RolleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.Rolle");
 		private final Assignment cSubstantivAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cSubstantivUPPERCASE_WORDTerminalRuleCall_0 = (RuleCall)cSubstantivAssignment.eContents().get(0);
+		private final RuleCall cSubstantivSUBSTANTIVTerminalRuleCall_0 = (RuleCall)cSubstantivAssignment.eContents().get(0);
 		
 		//Rolle:
-		//    substantiv=UPPERCASE_WORD;
+		//    substantiv=SUBSTANTIV;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//substantiv=UPPERCASE_WORD
+		//substantiv=SUBSTANTIV
 		public Assignment getSubstantivAssignment() { return cSubstantivAssignment; }
 		
-		//UPPERCASE_WORD
-		public RuleCall getSubstantivUPPERCASE_WORDTerminalRuleCall_0() { return cSubstantivUPPERCASE_WORDTerminalRuleCall_0; }
+		//SUBSTANTIV
+		public RuleCall getSubstantivSUBSTANTIVTerminalRuleCall_0() { return cSubstantivSUBSTANTIVTerminalRuleCall_0; }
 	}
 	public class Ziel_WunschElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.Ziel_Wunsch");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSubjectAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cSubjectUPPERCASE_WORDTerminalRuleCall_0_0 = (RuleCall)cSubjectAssignment_0.eContents().get(0);
-		private final Assignment cInfinitivAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInfinitivInfinitivParserRuleCall_1_0 = (RuleCall)cInfinitivAssignment_1.eContents().get(0);
+		private final RuleCall cSubjectSUBSTANTIVTerminalRuleCall_0_0 = (RuleCall)cSubjectAssignment_0.eContents().get(0);
+		private final Assignment cVerbAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cVerbVERBTerminalRuleCall_1_0 = (RuleCall)cVerbAssignment_1.eContents().get(0);
 		
 		//Ziel_Wunsch:
-		//    subject=UPPERCASE_WORD infinitiv=Infinitiv;
+		//    subject=SUBSTANTIV verb=VERB;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//subject=UPPERCASE_WORD infinitiv=Infinitiv
+		//subject=SUBSTANTIV verb=VERB
 		public Group getGroup() { return cGroup; }
 		
-		//subject=UPPERCASE_WORD
+		//subject=SUBSTANTIV
 		public Assignment getSubjectAssignment_0() { return cSubjectAssignment_0; }
 		
-		//UPPERCASE_WORD
-		public RuleCall getSubjectUPPERCASE_WORDTerminalRuleCall_0_0() { return cSubjectUPPERCASE_WORDTerminalRuleCall_0_0; }
+		//SUBSTANTIV
+		public RuleCall getSubjectSUBSTANTIVTerminalRuleCall_0_0() { return cSubjectSUBSTANTIVTerminalRuleCall_0_0; }
 		
-		//infinitiv=Infinitiv
-		public Assignment getInfinitivAssignment_1() { return cInfinitivAssignment_1; }
+		//verb=VERB
+		public Assignment getVerbAssignment_1() { return cVerbAssignment_1; }
 		
-		//Infinitiv
-		public RuleCall getInfinitivInfinitivParserRuleCall_1_0() { return cInfinitivInfinitivParserRuleCall_1_0; }
-	}
-	public class InfinitivElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.Infinitiv");
-		private final Assignment cWordAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cWordLOWERCASE_WORDTerminalRuleCall_0 = (RuleCall)cWordAssignment.eContents().get(0);
-		
-		//Infinitiv:
-		//    word=LOWERCASE_WORD;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//word=LOWERCASE_WORD
-		public Assignment getWordAssignment() { return cWordAssignment; }
-		
-		//LOWERCASE_WORD
-		public RuleCall getWordLOWERCASE_WORDTerminalRuleCall_0() { return cWordLOWERCASE_WORDTerminalRuleCall_0; }
+		//VERB
+		public RuleCall getVerbVERBTerminalRuleCall_1_0() { return cVerbVERBTerminalRuleCall_1_0; }
 	}
 	
 	
@@ -214,11 +199,14 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	private final NutzenElements pNutzen;
 	private final RolleElements pRolle;
 	private final Ziel_WunschElements pZiel_Wunsch;
-	private final InfinitivElements pInfinitiv;
-	private final TerminalRule tUPPERCASE_WORD;
-	private final TerminalRule tLOWERCASE_WORD;
-	private final TerminalRule tUPERCASE_LETTER;
-	private final TerminalRule tLOWERCASE_LETTER;
+	private final TerminalRule tANY_BUT_NOT_Z;
+	private final TerminalRule tANY_BUT_NOT_U;
+	private final TerminalRule tNOT_ZU;
+	private final TerminalRule tNEW_Z;
+	private final TerminalRule tNEW_END;
+	private final TerminalRule tZUZUZUVERB;
+	private final TerminalRule tSUBSTANTIV;
+	private final TerminalRule tVERB;
 	
 	private final Grammar grammar;
 	
@@ -235,11 +223,14 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		this.pNutzen = new NutzenElements();
 		this.pRolle = new RolleElements();
 		this.pZiel_Wunsch = new Ziel_WunschElements();
-		this.pInfinitiv = new InfinitivElements();
-		this.tUPPERCASE_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
-		this.tLOWERCASE_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.LOWERCASE_WORD");
-		this.tUPERCASE_LETTER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.UPERCASE_LETTER");
-		this.tLOWERCASE_LETTER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.LOWERCASE_LETTER");
+		this.tANY_BUT_NOT_Z = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.ANY_BUT_NOT_Z");
+		this.tANY_BUT_NOT_U = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.ANY_BUT_NOT_U");
+		this.tNOT_ZU = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.NOT_ZU");
+		this.tNEW_Z = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.NEW_Z");
+		this.tNEW_END = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.NEW_END");
+		this.tZUZUZUVERB = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.ZUZUZUVERB");
+		this.tSUBSTANTIV = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.SUBSTANTIV");
+		this.tVERB = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.htwdd.sf.beleg.s85769s88750.MyDsl.VERB");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -290,7 +281,7 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Title:
-	//    substantiv=UPPERCASE_WORD infinitiv=Infinitiv;
+	//    substantiv=SUBSTANTIV verb=VERB;
 	public TitleElements getTitleAccess() {
 		return pTitle;
 	}
@@ -300,7 +291,7 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Nutzen:
-	//    subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
+	//    subject=SUBSTANTIV verb=ZUZUZUVERB;
 	public NutzenElements getNutzenAccess() {
 		return pNutzen;
 	}
@@ -310,7 +301,7 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Rolle:
-	//    substantiv=UPPERCASE_WORD;
+	//    substantiv=SUBSTANTIV;
 	public RolleElements getRolleAccess() {
 		return pRolle;
 	}
@@ -320,7 +311,7 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Ziel_Wunsch:
-	//    subject=UPPERCASE_WORD infinitiv=Infinitiv;
+	//    subject=SUBSTANTIV verb=VERB;
 	public Ziel_WunschElements getZiel_WunschAccess() {
 		return pZiel_Wunsch;
 	}
@@ -329,38 +320,52 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getZiel_WunschAccess().getRule();
 	}
 	
-	//Infinitiv:
-	//    word=LOWERCASE_WORD;
-	public InfinitivElements getInfinitivAccess() {
-		return pInfinitiv;
+	//terminal fragment ANY_BUT_NOT_Z:
+	//    ('a'..'y');
+	public TerminalRule getANY_BUT_NOT_ZRule() {
+		return tANY_BUT_NOT_Z;
 	}
 	
-	public ParserRule getInfinitivRule() {
-		return getInfinitivAccess().getRule();
+	//terminal fragment ANY_BUT_NOT_U:
+	//    ('a'..'t' | 'v'..'z');
+	public TerminalRule getANY_BUT_NOT_URule() {
+		return tANY_BUT_NOT_U;
 	}
 	
-	//terminal UPPERCASE_WORD:
-	//    UPERCASE_LETTER LOWERCASE_LETTER+;
-	public TerminalRule getUPPERCASE_WORDRule() {
-		return tUPPERCASE_WORD;
+	//terminal fragment NOT_ZU:
+	//    ('a'..'t' | 'v'..'y');
+	public TerminalRule getNOT_ZURule() {
+		return tNOT_ZU;
 	}
 	
-	//terminal LOWERCASE_WORD:
-	//    LOWERCASE_LETTER+;
-	public TerminalRule getLOWERCASE_WORDRule() {
-		return tLOWERCASE_WORD;
+	//terminal fragment NEW_Z:
+	//    (('z')+ NOT_ZU);
+	public TerminalRule getNEW_ZRule() {
+		return tNEW_Z;
 	}
 	
-	//terminal fragment UPERCASE_LETTER:
-	//    ('A'..'Z') | 'Ä' | 'Ü' | 'Ö';
-	public TerminalRule getUPERCASE_LETTERRule() {
-		return tUPERCASE_LETTER;
+	//terminal fragment NEW_END:
+	//    ('z')* ('zuzu');
+	public TerminalRule getNEW_ENDRule() {
+		return tNEW_END;
 	}
 	
-	//terminal fragment LOWERCASE_LETTER:
-	//    ('a'..'z') | 'ä' | 'ü' | 'ö' | 'ß';
-	public TerminalRule getLOWERCASE_LETTERRule() {
-		return tLOWERCASE_LETTER;
+	//terminal ZUZUZUVERB:
+	//    ('zu') ((ANY_BUT_NOT_Z | NEW_Z))* NEW_END ((ANY_BUT_NOT_Z | NEW_Z))* ('en' | 'ern' | 'eln');
+	public TerminalRule getZUZUZUVERBRule() {
+		return tZUZUZUVERB;
+	}
+	
+	//terminal SUBSTANTIV:
+	//     ('A'..'Z' | 'Ä' | 'Ü' | 'Ö') ('a'..'z' | 'ä' | 'ü' | 'ö' | 'ß')+;
+	public TerminalRule getSUBSTANTIVRule() {
+		return tSUBSTANTIV;
+	}
+	
+	//terminal VERB:
+	//    ('a'..'z' | 'ä' | 'ö' | 'ü' | 'ß')+ ('en' | 'ern' | 'eln');
+	public TerminalRule getVERBRule() {
+		return tVERB;
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

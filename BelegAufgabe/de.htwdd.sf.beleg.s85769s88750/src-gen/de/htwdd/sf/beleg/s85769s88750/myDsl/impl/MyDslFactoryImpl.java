@@ -71,7 +71,6 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
       case MyDslPackage.NUTZEN: return createNutzen();
       case MyDslPackage.ROLLE: return createRolle();
       case MyDslPackage.ZIEL_WUNSCH: return createZiel_Wunsch();
-      case MyDslPackage.INFINITIV: return createInfinitiv();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -147,18 +146,6 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     Ziel_WunschImpl ziel_Wunsch = new Ziel_WunschImpl();
     return ziel_Wunsch;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Infinitiv createInfinitiv()
-  {
-    InfinitivImpl infinitiv = new InfinitivImpl();
-    return infinitiv;
   }
 
   /**

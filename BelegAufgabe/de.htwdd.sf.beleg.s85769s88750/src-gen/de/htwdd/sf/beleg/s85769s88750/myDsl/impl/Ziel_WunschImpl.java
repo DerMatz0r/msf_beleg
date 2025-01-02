@@ -3,15 +3,12 @@
  */
 package de.htwdd.sf.beleg.s85769s88750.myDsl.impl;
 
-import de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -25,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getSubject <em>Subject</em>}</li>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getInfinitiv <em>Infinitiv</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.Ziel_WunschImpl#getVerb <em>Verb</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,14 +50,24 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
   protected String subject = SUBJECT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInfinitiv() <em>Infinitiv</em>}' containment reference.
+   * The default value of the '{@link #getVerb() <em>Verb</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInfinitiv()
+   * @see #getVerb()
    * @generated
    * @ordered
    */
-  protected Infinitiv infinitiv;
+  protected static final String VERB_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getVerb() <em>Verb</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVerb()
+   * @generated
+   * @ordered
+   */
+  protected String verb = VERB_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -114,9 +121,9 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
    * @generated
    */
   @Override
-  public Infinitiv getInfinitiv()
+  public String getVerb()
   {
-    return infinitiv;
+    return verb;
   }
 
   /**
@@ -124,54 +131,13 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInfinitiv(Infinitiv newInfinitiv, NotificationChain msgs)
+  @Override
+  public void setVerb(String newVerb)
   {
-    Infinitiv oldInfinitiv = infinitiv;
-    infinitiv = newInfinitiv;
+    String oldVerb = verb;
+    verb = newVerb;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyDslPackage.ZIEL_WUNSCH__INFINITIV, oldInfinitiv, newInfinitiv);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setInfinitiv(Infinitiv newInfinitiv)
-  {
-    if (newInfinitiv != infinitiv)
-    {
-      NotificationChain msgs = null;
-      if (infinitiv != null)
-        msgs = ((InternalEObject)infinitiv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyDslPackage.ZIEL_WUNSCH__INFINITIV, null, msgs);
-      if (newInfinitiv != null)
-        msgs = ((InternalEObject)newInfinitiv).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyDslPackage.ZIEL_WUNSCH__INFINITIV, null, msgs);
-      msgs = basicSetInfinitiv(newInfinitiv, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ZIEL_WUNSCH__INFINITIV, newInfinitiv, newInfinitiv));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
-        return basicSetInfinitiv(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.ZIEL_WUNSCH__VERB, oldVerb, verb));
   }
 
   /**
@@ -186,8 +152,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
     {
       case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
         return getSubject();
-      case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
-        return getInfinitiv();
+      case MyDslPackage.ZIEL_WUNSCH__VERB:
+        return getVerb();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -205,8 +171,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
       case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
         setSubject((String)newValue);
         return;
-      case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
-        setInfinitiv((Infinitiv)newValue);
+      case MyDslPackage.ZIEL_WUNSCH__VERB:
+        setVerb((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -225,8 +191,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
       case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
         setSubject(SUBJECT_EDEFAULT);
         return;
-      case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
-        setInfinitiv((Infinitiv)null);
+      case MyDslPackage.ZIEL_WUNSCH__VERB:
+        setVerb(VERB_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -244,8 +210,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
     {
       case MyDslPackage.ZIEL_WUNSCH__SUBJECT:
         return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
-      case MyDslPackage.ZIEL_WUNSCH__INFINITIV:
-        return infinitiv != null;
+      case MyDslPackage.ZIEL_WUNSCH__VERB:
+        return VERB_EDEFAULT == null ? verb != null : !VERB_EDEFAULT.equals(verb);
     }
     return super.eIsSet(featureID);
   }
@@ -263,6 +229,8 @@ public class Ziel_WunschImpl extends MinimalEObjectImpl.Container implements Zie
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (subject: ");
     result.append(subject);
+    result.append(", verb: ");
+    result.append(verb);
     result.append(')');
     return result.toString();
   }

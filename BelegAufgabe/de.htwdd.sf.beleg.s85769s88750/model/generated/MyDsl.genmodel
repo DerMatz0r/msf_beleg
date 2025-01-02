@@ -17,7 +17,7 @@
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Title/substantiv"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Title/infinitiv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Title/verb"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Nutzen">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Nutzen/subject"/>
@@ -28,10 +28,7 @@
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Ziel_Wunsch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Ziel_Wunsch/subject"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Ziel_Wunsch/infinitiv"/>
-    </genClasses>
-    <genClasses ecoreClass="MyDsl.ecore#//Infinitiv">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Infinitiv/word"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Ziel_Wunsch/verb"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

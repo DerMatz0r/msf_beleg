@@ -41,13 +41,12 @@ public class MyDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getUser_StoryAccess().getRolleAssignment_5(), "rule__User_Story__RolleAssignment_5");
 			builder.put(grammarAccess.getUser_StoryAccess().getZiel_wunschAssignment_6(), "rule__User_Story__Ziel_wunschAssignment_6");
 			builder.put(grammarAccess.getTitleAccess().getSubstantivAssignment_0(), "rule__Title__SubstantivAssignment_0");
-			builder.put(grammarAccess.getTitleAccess().getInfinitivAssignment_1(), "rule__Title__InfinitivAssignment_1");
+			builder.put(grammarAccess.getTitleAccess().getVerbAssignment_1(), "rule__Title__VerbAssignment_1");
 			builder.put(grammarAccess.getNutzenAccess().getSubjectAssignment_0(), "rule__Nutzen__SubjectAssignment_0");
 			builder.put(grammarAccess.getNutzenAccess().getVerbAssignment_1(), "rule__Nutzen__VerbAssignment_1");
 			builder.put(grammarAccess.getRolleAccess().getSubstantivAssignment(), "rule__Rolle__SubstantivAssignment");
 			builder.put(grammarAccess.getZiel_WunschAccess().getSubjectAssignment_0(), "rule__Ziel_Wunsch__SubjectAssignment_0");
-			builder.put(grammarAccess.getZiel_WunschAccess().getInfinitivAssignment_1(), "rule__Ziel_Wunsch__InfinitivAssignment_1");
-			builder.put(grammarAccess.getInfinitivAccess().getWordAssignment(), "rule__Infinitiv__WordAssignment");
+			builder.put(grammarAccess.getZiel_WunschAccess().getVerbAssignment_1(), "rule__Ziel_Wunsch__VerbAssignment_1");
 		}
 	}
 	

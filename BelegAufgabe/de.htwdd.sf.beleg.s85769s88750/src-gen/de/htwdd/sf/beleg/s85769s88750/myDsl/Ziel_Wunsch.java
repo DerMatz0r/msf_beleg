@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getSubject <em>Subject</em>}</li>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv <em>Infinitiv</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getVerb <em>Verb</em>}</li>
  * </ul>
  *
  * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getZiel_Wunsch()
@@ -47,25 +47,25 @@ public interface Ziel_Wunsch extends EObject
   void setSubject(String value);
 
   /**
-   * Returns the value of the '<em><b>Infinitiv</b></em>' containment reference.
+   * Returns the value of the '<em><b>Verb</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Infinitiv</em>' containment reference.
-   * @see #setInfinitiv(Infinitiv)
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getZiel_Wunsch_Infinitiv()
-   * @model containment="true"
+   * @return the value of the '<em>Verb</em>' attribute.
+   * @see #setVerb(String)
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage#getZiel_Wunsch_Verb()
+   * @model
    * @generated
    */
-  Infinitiv getInfinitiv();
+  String getVerb();
 
   /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv <em>Infinitiv</em>}' containment reference.
+   * Sets the value of the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getVerb <em>Verb</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Infinitiv</em>' containment reference.
-   * @see #getInfinitiv()
+   * @param value the new value of the '<em>Verb</em>' attribute.
+   * @see #getVerb()
    * @generated
    */
-  void setInfinitiv(Infinitiv value);
+  void setVerb(String value);
 
 } // Ziel_Wunsch

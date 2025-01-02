@@ -3,7 +3,6 @@
  */
 package de.htwdd.sf.beleg.s85769s88750.myDsl.impl;
 
-import de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslFactory;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.Nutzen;
@@ -69,13 +68,6 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   private EClass ziel_WunschEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass infinitivEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -244,9 +236,9 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   @Override
-  public EReference getTitle_Infinitiv()
+  public EAttribute getTitle_Verb()
   {
-    return (EReference)titleEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)titleEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -332,31 +324,9 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   @Override
-  public EReference getZiel_Wunsch_Infinitiv()
+  public EAttribute getZiel_Wunsch_Verb()
   {
-    return (EReference)ziel_WunschEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getInfinitiv()
-  {
-    return infinitivEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getInfinitiv_Word()
-  {
-    return (EAttribute)infinitivEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ziel_WunschEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -401,7 +371,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
 
     titleEClass = createEClass(TITLE);
     createEAttribute(titleEClass, TITLE__SUBSTANTIV);
-    createEReference(titleEClass, TITLE__INFINITIV);
+    createEAttribute(titleEClass, TITLE__VERB);
 
     nutzenEClass = createEClass(NUTZEN);
     createEAttribute(nutzenEClass, NUTZEN__SUBJECT);
@@ -412,10 +382,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
 
     ziel_WunschEClass = createEClass(ZIEL_WUNSCH);
     createEAttribute(ziel_WunschEClass, ZIEL_WUNSCH__SUBJECT);
-    createEReference(ziel_WunschEClass, ZIEL_WUNSCH__INFINITIV);
-
-    infinitivEClass = createEClass(INFINITIV);
-    createEAttribute(infinitivEClass, INFINITIV__WORD);
+    createEAttribute(ziel_WunschEClass, ZIEL_WUNSCH__VERB);
   }
 
   /**
@@ -460,7 +427,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
 
     initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTitle_Substantiv(), ecorePackage.getEString(), "substantiv", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTitle_Infinitiv(), this.getInfinitiv(), null, "infinitiv", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTitle_Verb(), ecorePackage.getEString(), "verb", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nutzenEClass, Nutzen.class, "Nutzen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNutzen_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Nutzen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -471,10 +438,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
 
     initEClass(ziel_WunschEClass, Ziel_Wunsch.class, "Ziel_Wunsch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getZiel_Wunsch_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Ziel_Wunsch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getZiel_Wunsch_Infinitiv(), this.getInfinitiv(), null, "infinitiv", null, 0, 1, Ziel_Wunsch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(infinitivEClass, Infinitiv.class, "Infinitiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInfinitiv_Word(), ecorePackage.getEString(), "word", null, 0, 1, Infinitiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getZiel_Wunsch_Verb(), ecorePackage.getEString(), "verb", null, 0, 1, Ziel_Wunsch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -78,15 +78,6 @@ public interface MyDslFactory extends EFactory
   Ziel_Wunsch createZiel_Wunsch();
 
   /**
-   * Returns a new object of class '<em>Infinitiv</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Infinitiv</em>'.
-   * @generated
-   */
-  Infinitiv createInfinitiv();
-
-  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

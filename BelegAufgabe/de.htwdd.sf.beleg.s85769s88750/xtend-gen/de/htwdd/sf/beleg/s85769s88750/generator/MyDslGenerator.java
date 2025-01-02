@@ -5,6 +5,7 @@ package de.htwdd.sf.beleg.s85769s88750.generator;
 
 import com.google.common.collect.Iterators;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.User_Story;
+import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -27,19 +28,6 @@ public class MyDslGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     final List<User_Story> userStories = IteratorExtensions.<User_Story>toList(Iterators.<User_Story>filter(resource.getAllContents(), User_Story.class));
-    InputOutput.<String>println("------------------------------------------------");
-    InputOutput.<String>println("Titel:");
-    InputOutput.<String>println(userStories.get(0).getTitle().getSubstantiv());
-    InputOutput.<String>println(userStories.get(0).getTitle().getInfinitiv().getWord());
-    InputOutput.<String>println("Rolle");
-    InputOutput.<String>println(userStories.get(0).getRolle().getSubstantiv());
-    InputOutput.<String>println("Ziel/Wunsch");
-    InputOutput.<String>println(userStories.get(0).getZiel_wunsch().getSubject());
-    InputOutput.<String>println(userStories.get(0).getZiel_wunsch().getInfinitiv().getWord());
-    InputOutput.<String>println("Nutzen");
-    InputOutput.<String>println(userStories.get(0).getNutzen().getSubject());
-    final String verb = this.getInfinitiv(userStories.get(0).getNutzen().getVerb());
-    InputOutput.<String>println(verb);
     this.createCSV(userStories);
   }
 
@@ -67,15 +55,17 @@ public class MyDslGenerator extends AbstractGenerator {
 
   public void createCSV(final List<User_Story> userStories) {
     try {
-      final String filePath = "F:/Progammierquatsch/BelegAufgabe/output.csv";
+      final String filePath = "output.csv";
+      InputOutput.<String>println(new File(filePath).getAbsolutePath());
       final FileWriter writer = new FileWriter(filePath);
       writer.write("Titel,Rolle,Ziel/Wunsch,Nutzen\n");
       for (final User_Story userStory : userStories) {
         {
+          InputOutput.<String>println("test");
           String _substantiv = userStory.getTitle().getSubstantiv();
           String _plus = (_substantiv + " ");
-          String _word = userStory.getTitle().getInfinitiv().getWord();
-          String _plus_1 = (_plus + _word);
+          String _verb = userStory.getTitle().getVerb();
+          String _plus_1 = (_plus + _verb);
           String _plus_2 = (_plus_1 + ",");
           String _substantiv_1 = userStory.getRolle().getSubstantiv();
           String _plus_3 = (_plus_2 + _substantiv_1);
@@ -83,8 +73,8 @@ public class MyDslGenerator extends AbstractGenerator {
           String _subject = userStory.getZiel_wunsch().getSubject();
           String _plus_5 = (_plus_4 + _subject);
           String _plus_6 = (_plus_5 + " ");
-          String _word_1 = userStory.getZiel_wunsch().getInfinitiv().getWord();
-          String _plus_7 = (_plus_6 + _word_1);
+          String _verb_1 = userStory.getZiel_wunsch().getVerb();
+          String _plus_7 = (_plus_6 + _verb_1);
           String _plus_8 = (_plus_7 + ",");
           String _subject_1 = userStory.getNutzen().getSubject();
           String _plus_9 = (_plus_8 + _subject_1);

@@ -9,28 +9,38 @@ User_Story:
 	title=Title ":" 'Um' nutzen=Nutzen ', möchte ich als' rolle=Rolle ziel_wunsch=Ziel_Wunsch '.';
 
 Title:
-	substantiv=UPPERCASE_WORD infinitiv=Infinitiv;
+	substantiv=SUBSTANTIV verb=VERB;
 
 Nutzen:
-	subject=UPPERCASE_WORD verb=LOWERCASE_WORD;
+	subject=SUBSTANTIV verb=ZUZUZUVERB;
 
 Rolle:
-	substantiv=UPPERCASE_WORD;
+	substantiv=SUBSTANTIV;
 
 Ziel_Wunsch:
-	subject=UPPERCASE_WORD infinitiv=Infinitiv;
+	subject=SUBSTANTIV verb=VERB;
 
-Infinitiv:
-	word=LOWERCASE_WORD;
+	
+terminal fragment ANY_BUT_NOT_Z:
+	('a'..'y');
 
-terminal UPPERCASE_WORD:
-	UPERCASE_LETTER LOWERCASE_LETTER+;
-
-terminal LOWERCASE_WORD:
-	LOWERCASE_LETTER+;
-
-terminal fragment UPERCASE_LETTER:
-	('A'..'Z') | 'Ä' | 'Ü' | 'Ö';
-
-terminal fragment LOWERCASE_LETTER:
-	('a'..'z') | 'ä' | 'ü' | 'ö' | 'ß';
+terminal fragment ANY_BUT_NOT_U:
+	('a'..'t' | 'v'..'z');
+	
+terminal fragment NOT_ZU:
+	('a'..'t' | 'v'..'y');
+	
+terminal fragment NEW_Z:
+	(('z')+ NOT_ZU);
+	
+terminal fragment NEW_END:
+	('z')* ('zuzu');
+	
+terminal ZUZUZUVERB:
+	('zu') ((ANY_BUT_NOT_Z | NEW_Z))* NEW_END ((ANY_BUT_NOT_Z | NEW_Z))* ('en' | 'ern' | 'eln');
+	
+terminal SUBSTANTIV:
+	 ('A'..'Z' | 'Ä' | 'Ü' | 'Ö') ('a'..'z' | 'ä' | 'ü' | 'ö' | 'ß')+;
+	 
+terminal VERB:
+	('a'..'z' | 'ä' | 'ö' | 'ü' | 'ß')+ ('en' | 'ern' | 'eln');	

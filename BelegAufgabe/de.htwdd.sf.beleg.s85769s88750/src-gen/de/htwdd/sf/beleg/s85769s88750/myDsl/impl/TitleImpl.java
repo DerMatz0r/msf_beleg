@@ -3,15 +3,12 @@
  */
 package de.htwdd.sf.beleg.s85769s88750.myDsl.impl;
 
-import de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.MyDslPackage;
 import de.htwdd.sf.beleg.s85769s88750.myDsl.Title;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -25,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.TitleImpl#getSubstantiv <em>Substantiv</em>}</li>
- *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.TitleImpl#getInfinitiv <em>Infinitiv</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.TitleImpl#getVerb <em>Verb</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,14 +50,24 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
   protected String substantiv = SUBSTANTIV_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInfinitiv() <em>Infinitiv</em>}' containment reference.
+   * The default value of the '{@link #getVerb() <em>Verb</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInfinitiv()
+   * @see #getVerb()
    * @generated
    * @ordered
    */
-  protected Infinitiv infinitiv;
+  protected static final String VERB_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getVerb() <em>Verb</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVerb()
+   * @generated
+   * @ordered
+   */
+  protected String verb = VERB_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -114,9 +121,9 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
    * @generated
    */
   @Override
-  public Infinitiv getInfinitiv()
+  public String getVerb()
   {
-    return infinitiv;
+    return verb;
   }
 
   /**
@@ -124,54 +131,13 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInfinitiv(Infinitiv newInfinitiv, NotificationChain msgs)
+  @Override
+  public void setVerb(String newVerb)
   {
-    Infinitiv oldInfinitiv = infinitiv;
-    infinitiv = newInfinitiv;
+    String oldVerb = verb;
+    verb = newVerb;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MyDslPackage.TITLE__INFINITIV, oldInfinitiv, newInfinitiv);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setInfinitiv(Infinitiv newInfinitiv)
-  {
-    if (newInfinitiv != infinitiv)
-    {
-      NotificationChain msgs = null;
-      if (infinitiv != null)
-        msgs = ((InternalEObject)infinitiv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MyDslPackage.TITLE__INFINITIV, null, msgs);
-      if (newInfinitiv != null)
-        msgs = ((InternalEObject)newInfinitiv).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MyDslPackage.TITLE__INFINITIV, null, msgs);
-      msgs = basicSetInfinitiv(newInfinitiv, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.TITLE__INFINITIV, newInfinitiv, newInfinitiv));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case MyDslPackage.TITLE__INFINITIV:
-        return basicSetInfinitiv(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.TITLE__VERB, oldVerb, verb));
   }
 
   /**
@@ -186,8 +152,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
     {
       case MyDslPackage.TITLE__SUBSTANTIV:
         return getSubstantiv();
-      case MyDslPackage.TITLE__INFINITIV:
-        return getInfinitiv();
+      case MyDslPackage.TITLE__VERB:
+        return getVerb();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -205,8 +171,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
       case MyDslPackage.TITLE__SUBSTANTIV:
         setSubstantiv((String)newValue);
         return;
-      case MyDslPackage.TITLE__INFINITIV:
-        setInfinitiv((Infinitiv)newValue);
+      case MyDslPackage.TITLE__VERB:
+        setVerb((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -225,8 +191,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
       case MyDslPackage.TITLE__SUBSTANTIV:
         setSubstantiv(SUBSTANTIV_EDEFAULT);
         return;
-      case MyDslPackage.TITLE__INFINITIV:
-        setInfinitiv((Infinitiv)null);
+      case MyDslPackage.TITLE__VERB:
+        setVerb(VERB_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -244,8 +210,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
     {
       case MyDslPackage.TITLE__SUBSTANTIV:
         return SUBSTANTIV_EDEFAULT == null ? substantiv != null : !SUBSTANTIV_EDEFAULT.equals(substantiv);
-      case MyDslPackage.TITLE__INFINITIV:
-        return infinitiv != null;
+      case MyDslPackage.TITLE__VERB:
+        return VERB_EDEFAULT == null ? verb != null : !VERB_EDEFAULT.equals(verb);
     }
     return super.eIsSet(featureID);
   }
@@ -263,6 +229,8 @@ public class TitleImpl extends MinimalEObjectImpl.Container implements Title
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (substantiv: ");
     result.append(substantiv);
+    result.append(", verb: ");
+    result.append(verb);
     result.append(')');
     return result.toString();
   }

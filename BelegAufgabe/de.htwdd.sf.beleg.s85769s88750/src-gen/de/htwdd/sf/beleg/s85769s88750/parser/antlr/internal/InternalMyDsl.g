@@ -225,9 +225,9 @@ ruleTitle returns [EObject current=null]
 	(
 		(
 			(
-				lv_substantiv_0_0=RULE_UPPERCASE_WORD
+				lv_substantiv_0_0=RULE_SUBSTANTIV
 				{
-					newLeafNode(lv_substantiv_0_0, grammarAccess.getTitleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0_0());
+					newLeafNode(lv_substantiv_0_0, grammarAccess.getTitleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -237,26 +237,25 @@ ruleTitle returns [EObject current=null]
 						$current,
 						"substantiv",
 						lv_substantiv_0_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.SUBSTANTIV");
 				}
 			)
 		)
 		(
 			(
+				lv_verb_1_0=RULE_VERB
 				{
-					newCompositeNode(grammarAccess.getTitleAccess().getInfinitivInfinitivParserRuleCall_1_0());
+					newLeafNode(lv_verb_1_0, grammarAccess.getTitleAccess().getVerbVERBTerminalRuleCall_1_0());
 				}
-				lv_infinitiv_1_0=ruleInfinitiv
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTitleRule());
+						$current = createModelElement(grammarAccess.getTitleRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
-						"infinitiv",
-						lv_infinitiv_1_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.Infinitiv");
-					afterParserOrEnumRuleCall();
+						"verb",
+						lv_verb_1_0,
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.VERB");
 				}
 			)
 		)
@@ -281,9 +280,9 @@ ruleNutzen returns [EObject current=null]
 	(
 		(
 			(
-				lv_subject_0_0=RULE_UPPERCASE_WORD
+				lv_subject_0_0=RULE_SUBSTANTIV
 				{
-					newLeafNode(lv_subject_0_0, grammarAccess.getNutzenAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0());
+					newLeafNode(lv_subject_0_0, grammarAccess.getNutzenAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -293,15 +292,15 @@ ruleNutzen returns [EObject current=null]
 						$current,
 						"subject",
 						lv_subject_0_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.SUBSTANTIV");
 				}
 			)
 		)
 		(
 			(
-				lv_verb_1_0=RULE_LOWERCASE_WORD
+				lv_verb_1_0=RULE_ZUZUZUVERB
 				{
-					newLeafNode(lv_verb_1_0, grammarAccess.getNutzenAccess().getVerbLOWERCASE_WORDTerminalRuleCall_1_0());
+					newLeafNode(lv_verb_1_0, grammarAccess.getNutzenAccess().getVerbZUZUZUVERBTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -311,7 +310,7 @@ ruleNutzen returns [EObject current=null]
 						$current,
 						"verb",
 						lv_verb_1_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.LOWERCASE_WORD");
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.ZUZUZUVERB");
 				}
 			)
 		)
@@ -335,9 +334,9 @@ ruleRolle returns [EObject current=null]
 }:
 	(
 		(
-			lv_substantiv_0_0=RULE_UPPERCASE_WORD
+			lv_substantiv_0_0=RULE_SUBSTANTIV
 			{
-				newLeafNode(lv_substantiv_0_0, grammarAccess.getRolleAccess().getSubstantivUPPERCASE_WORDTerminalRuleCall_0());
+				newLeafNode(lv_substantiv_0_0, grammarAccess.getRolleAccess().getSubstantivSUBSTANTIVTerminalRuleCall_0());
 			}
 			{
 				if ($current==null) {
@@ -347,7 +346,7 @@ ruleRolle returns [EObject current=null]
 					$current,
 					"substantiv",
 					lv_substantiv_0_0,
-					"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
+					"de.htwdd.sf.beleg.s85769s88750.MyDsl.SUBSTANTIV");
 			}
 		)
 	)
@@ -371,9 +370,9 @@ ruleZiel_Wunsch returns [EObject current=null]
 	(
 		(
 			(
-				lv_subject_0_0=RULE_UPPERCASE_WORD
+				lv_subject_0_0=RULE_SUBSTANTIV
 				{
-					newLeafNode(lv_subject_0_0, grammarAccess.getZiel_WunschAccess().getSubjectUPPERCASE_WORDTerminalRuleCall_0_0());
+					newLeafNode(lv_subject_0_0, grammarAccess.getZiel_WunschAccess().getSubjectSUBSTANTIVTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -383,74 +382,46 @@ ruleZiel_Wunsch returns [EObject current=null]
 						$current,
 						"subject",
 						lv_subject_0_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.UPPERCASE_WORD");
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.SUBSTANTIV");
 				}
 			)
 		)
 		(
 			(
+				lv_verb_1_0=RULE_VERB
 				{
-					newCompositeNode(grammarAccess.getZiel_WunschAccess().getInfinitivInfinitivParserRuleCall_1_0());
+					newLeafNode(lv_verb_1_0, grammarAccess.getZiel_WunschAccess().getVerbVERBTerminalRuleCall_1_0());
 				}
-				lv_infinitiv_1_0=ruleInfinitiv
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getZiel_WunschRule());
+						$current = createModelElement(grammarAccess.getZiel_WunschRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
-						"infinitiv",
-						lv_infinitiv_1_0,
-						"de.htwdd.sf.beleg.s85769s88750.MyDsl.Infinitiv");
-					afterParserOrEnumRuleCall();
+						"verb",
+						lv_verb_1_0,
+						"de.htwdd.sf.beleg.s85769s88750.MyDsl.VERB");
 				}
 			)
 		)
 	)
 ;
 
-// Entry rule entryRuleInfinitiv
-entryRuleInfinitiv returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getInfinitivRule()); }
-	iv_ruleInfinitiv=ruleInfinitiv
-	{ $current=$iv_ruleInfinitiv.current; }
-	EOF;
+fragment RULE_ANY_BUT_NOT_Z : 'a'..'y';
 
-// Rule Infinitiv
-ruleInfinitiv returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			lv_word_0_0=RULE_LOWERCASE_WORD
-			{
-				newLeafNode(lv_word_0_0, grammarAccess.getInfinitivAccess().getWordLOWERCASE_WORDTerminalRuleCall_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getInfinitivRule());
-				}
-				setWithLastConsumed(
-					$current,
-					"word",
-					lv_word_0_0,
-					"de.htwdd.sf.beleg.s85769s88750.MyDsl.LOWERCASE_WORD");
-			}
-		)
-	)
-;
+fragment RULE_ANY_BUT_NOT_U : ('a'..'t'|'v'..'z');
 
-RULE_UPPERCASE_WORD : RULE_UPERCASE_LETTER RULE_LOWERCASE_LETTER+;
+fragment RULE_NOT_ZU : ('a'..'t'|'v'..'y');
 
-RULE_LOWERCASE_WORD : RULE_LOWERCASE_LETTER+;
+fragment RULE_NEW_Z : 'z'+ RULE_NOT_ZU;
 
-fragment RULE_UPERCASE_LETTER : ('A'..'Z'|'\u00C4'|'\u00DC'|'\u00D6');
+fragment RULE_NEW_END : 'z'* 'zuzu';
 
-fragment RULE_LOWERCASE_LETTER : ('a'..'z'|'\u00E4'|'\u00FC'|'\u00F6'|'\u00DF');
+RULE_ZUZUZUVERB : 'zu' (RULE_ANY_BUT_NOT_Z|RULE_NEW_Z)* RULE_NEW_END (RULE_ANY_BUT_NOT_Z|RULE_NEW_Z)* ('en'|'ern'|'eln');
+
+RULE_SUBSTANTIV : ('A'..'Z'|'\u00C4'|'\u00DC'|'\u00D6') ('a'..'z'|'\u00E4'|'\u00FC'|'\u00F6'|'\u00DF')+;
+
+RULE_VERB : ('a'..'z'|'\u00E4'|'\u00F6'|'\u00FC'|'\u00DF')+ ('en'|'ern'|'eln');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

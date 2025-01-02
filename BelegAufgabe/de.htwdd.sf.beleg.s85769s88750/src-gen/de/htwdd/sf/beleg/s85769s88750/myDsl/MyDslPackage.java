@@ -160,13 +160,13 @@ public interface MyDslPackage extends EPackage
   int TITLE__SUBSTANTIV = 0;
 
   /**
-   * The feature id for the '<em><b>Infinitiv</b></em>' containment reference.
+   * The feature id for the '<em><b>Verb</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TITLE__INFINITIV = 1;
+  int TITLE__VERB = 1;
 
   /**
    * The number of structural features of the '<em>Title</em>' class.
@@ -262,13 +262,13 @@ public interface MyDslPackage extends EPackage
   int ZIEL_WUNSCH__SUBJECT = 0;
 
   /**
-   * The feature id for the '<em><b>Infinitiv</b></em>' containment reference.
+   * The feature id for the '<em><b>Verb</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZIEL_WUNSCH__INFINITIV = 1;
+  int ZIEL_WUNSCH__VERB = 1;
 
   /**
    * The number of structural features of the '<em>Ziel Wunsch</em>' class.
@@ -278,34 +278,6 @@ public interface MyDslPackage extends EPackage
    * @ordered
    */
   int ZIEL_WUNSCH_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.InfinitivImpl <em>Infinitiv</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.impl.InfinitivImpl
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.impl.MyDslPackageImpl#getInfinitiv()
-   * @generated
-   */
-  int INFINITIV = 6;
-
-  /**
-   * The feature id for the '<em><b>Word</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INFINITIV__WORD = 0;
-
-  /**
-   * The number of structural features of the '<em>Infinitiv</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INFINITIV_FEATURE_COUNT = 1;
 
 
   /**
@@ -405,15 +377,15 @@ public interface MyDslPackage extends EPackage
   EAttribute getTitle_Substantiv();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Title#getInfinitiv <em>Infinitiv</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Title#getVerb <em>Verb</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Infinitiv</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Title#getInfinitiv()
+   * @return the meta object for the attribute '<em>Verb</em>'.
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Title#getVerb()
    * @see #getTitle()
    * @generated
    */
-  EReference getTitle_Infinitiv();
+  EAttribute getTitle_Verb();
 
   /**
    * Returns the meta object for class '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Nutzen <em>Nutzen</em>}'.
@@ -490,36 +462,15 @@ public interface MyDslPackage extends EPackage
   EAttribute getZiel_Wunsch_Subject();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv <em>Infinitiv</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getVerb <em>Verb</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Infinitiv</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getInfinitiv()
+   * @return the meta object for the attribute '<em>Verb</em>'.
+   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Ziel_Wunsch#getVerb()
    * @see #getZiel_Wunsch()
    * @generated
    */
-  EReference getZiel_Wunsch_Infinitiv();
-
-  /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv <em>Infinitiv</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Infinitiv</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv
-   * @generated
-   */
-  EClass getInfinitiv();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv#getWord <em>Word</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Word</em>'.
-   * @see de.htwdd.sf.beleg.s85769s88750.myDsl.Infinitiv#getWord()
-   * @see #getInfinitiv()
-   * @generated
-   */
-  EAttribute getInfinitiv_Word();
+  EAttribute getZiel_Wunsch_Verb();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -623,12 +574,12 @@ public interface MyDslPackage extends EPackage
     EAttribute TITLE__SUBSTANTIV = eINSTANCE.getTitle_Substantiv();
 
     /**
-     * The meta object literal for the '<em><b>Infinitiv</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Verb</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TITLE__INFINITIV = eINSTANCE.getTitle_Infinitiv();
+    EAttribute TITLE__VERB = eINSTANCE.getTitle_Verb();
 
     /**
      * The meta object literal for the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.NutzenImpl <em>Nutzen</em>}' class.
@@ -693,30 +644,12 @@ public interface MyDslPackage extends EPackage
     EAttribute ZIEL_WUNSCH__SUBJECT = eINSTANCE.getZiel_Wunsch_Subject();
 
     /**
-     * The meta object literal for the '<em><b>Infinitiv</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Verb</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ZIEL_WUNSCH__INFINITIV = eINSTANCE.getZiel_Wunsch_Infinitiv();
-
-    /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s85769s88750.myDsl.impl.InfinitivImpl <em>Infinitiv</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s85769s88750.myDsl.impl.InfinitivImpl
-     * @see de.htwdd.sf.beleg.s85769s88750.myDsl.impl.MyDslPackageImpl#getInfinitiv()
-     * @generated
-     */
-    EClass INFINITIV = eINSTANCE.getInfinitiv();
-
-    /**
-     * The meta object literal for the '<em><b>Word</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INFINITIV__WORD = eINSTANCE.getInfinitiv_Word();
+    EAttribute ZIEL_WUNSCH__VERB = eINSTANCE.getZiel_Wunsch_Verb();
 
   }
 
